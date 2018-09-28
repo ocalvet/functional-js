@@ -1,0 +1,1 @@
+# Functional concepts in Javascript
