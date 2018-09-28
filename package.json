@@ -4,7 +4,7 @@
   "description": "A repo for learning functional concepts in javascript",
   "main": "main.js",
   "scripts": {
-    "test": "npm test"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/ocalvet/functional-js/issues"
   },
-  "homepage": "https://github.com/ocalvet/functional-js#readme"
+  "homepage": "https://github.com/ocalvet/functional-js#readme",
+  "devDependencies": {
+    "jest": "^23.6.0"
+  }
 }
