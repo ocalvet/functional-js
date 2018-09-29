@@ -16,3 +16,12 @@ const data = {
 
 console.log(get('test')(data));
 
+// implement map with reduce
+const nmap = (list, f) => {
+  return list.reduce((p, e, i) => {
+    p.push(f(e));
+    return p;
+  }, [])
+}
+
+console.log('map', nmap([2,3,4], (e) => e + 1));
