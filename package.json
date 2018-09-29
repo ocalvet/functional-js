@@ -22,5 +22,8 @@
   "homepage": "https://github.com/ocalvet/functional-js#readme",
   "devDependencies": {
     "jest": "^23.6.0"
+  },
+  "dependencies": {
+    "lodash": "^4.17.11"
   }
 }
