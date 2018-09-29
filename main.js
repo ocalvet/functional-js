@@ -19,9 +19,10 @@ console.log(get('test')(data));
 // implement map with reduce
 const nmap = (list, f) => {
   return list.reduce((p, e, i) => {
-    p.push(f(e));
-    return p;
+    return p.concat([f(e)]);
   }, [])
 }
 
-console.log('map', nmap([2,3,4], (e) => e + 1));
+const plusOne = (e) => e + 1;
+
+console.log('map', nmap([2,3,4,9], plusOne));
