@@ -2,11 +2,11 @@ const _ = require('ramda');
 
 const testData = [1, 2, 3, 10, 5, 6, 22, 10, 12];
 
-isNotA10 = number => number !== 10;
-
-testData.forEach(number => {
-  console.log(isNotA10(number) ? 'Not a ten' : 'Ten');
-});
+const log = s => console.log(s);
+const to10String = b => b ? 'Not a ten' : 'Ten';
+const isNotA10 = number => number !== 10;
+const app = _.compose(log, to10String, isNotA10);
+_.map(app, testData)
 
 const get = _.curry((property, obj) => obj[property]);
 
