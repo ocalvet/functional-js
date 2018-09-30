@@ -4,7 +4,9 @@
   "description": "A repo for learning functional concepts in javascript",
   "main": "main.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "test:coverage": "npm test -- --coverage",
+    "test:badges": "npm run test:coverage  && jest-coverage-badges"
   },
   "repository": {
     "type": "git",
@@ -24,9 +26,13 @@
     "jest": "^23.6.0"
   },
   "jest": {
-    "coverageReporters": ["html"]
+    "coverageReporters": [
+      "html",
+      "json-summary"
+    ]
   },
   "dependencies": {
+    "jest-coverage-badges": "^1.0.0",
     "ramda": "^0.25.0"
   }
 }
