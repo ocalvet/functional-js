@@ -6,15 +6,9 @@ const log = s => console.log(s);
 const to10String = b => b ? 'Not a ten' : 'Ten';
 const isNotA10 = number => number !== 10;
 const app = _.compose(log, to10String, isNotA10);
-_.map(app, testData)
+// _.map(app, testData)
 
 const get = _.curry((property, obj) => obj[property]);
-
-const data = {
-  test: '1234'
-}
-
-console.log(get('test')(data));
 
 // implement map with reduce
 const newmap = _.curry((f, list) => {
@@ -23,8 +17,10 @@ const newmap = _.curry((f, list) => {
   };
   return list.reduce(concat, [])
 });
-
 const plusOne = (e) => e + 1;
 const elementsPlusOne = newmap(plusOne);
 
-console.log('map', elementsPlusOne([2,3,4,9]));
+module.exports = {
+  get,
+  elementsPlusOne
+};
