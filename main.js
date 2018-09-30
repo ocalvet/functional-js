@@ -17,12 +17,13 @@ const data = {
 console.log(get('test')(data));
 
 // implement map with reduce
-const nmap = (list, f) => {
+const nmap = _.curry((f, list) => {
   return list.reduce((p, e, i) => {
     return p.concat([f(e)]);
   }, [])
-}
+});
 
 const plusOne = (e) => e + 1;
+const elementsPlusOne = nmap(plusOne);
 
-console.log('map', nmap([2,3,4,9], plusOne));
+console.log('map', elementsPlusOne([2,3,4,9]));
