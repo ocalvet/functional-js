@@ -1,4 +1,4 @@
-const _ = require('lodash');
+const _ = require('ramda');
 
 const testData = [1, 2, 3, 10, 5, 6, 22, 10, 12];
 
