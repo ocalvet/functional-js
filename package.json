@@ -29,7 +29,15 @@
     "coverageReporters": [
       "html",
       "json-summary"
-    ]
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 0,
+        "functions": 50,
+        "lines": 50,
+        "statements": 80
+      }
+    }
   },
   "dependencies": {
     "jest-coverage-badges": "^1.0.0",
