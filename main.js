@@ -24,3 +24,12 @@ module.exports = {
   get,
   elementsPlusOne
 };
+
+Maybe = (val) => {
+  this.value = val;
+}
+
+Maybe.prototype.map = () => {
+  return this.value ? new Maybe(this.value) : new Maybe(null);
+}
+
