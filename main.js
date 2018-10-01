@@ -25,6 +25,8 @@ module.exports = {
   elementsPlusOne
 };
 
+const fnMap = (f, mappingFn) => (x => f(mappingFn(x)));
+
 Maybe = (val) => {
   this.value = val;
 }
