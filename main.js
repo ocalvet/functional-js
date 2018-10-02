@@ -27,7 +27,7 @@ module.exports = {
 
 const fnMap = (f, mappingFn) => (x => f(mappingFn(x)));
 
-Maybe = (val) => {
+function Maybe(val) {
   this.value = val;
 }
 
@@ -35,3 +35,9 @@ Maybe.prototype.map = () => {
   return this.value ? new Maybe(this.value) : new Maybe(null);
 }
 
+const times2 = v => v * 2;
+const times3 = v => v * 3;
+
+const times6 = fnMap(times2, times3);
+
+console.log(times6)(5);
