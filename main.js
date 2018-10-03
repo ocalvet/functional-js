@@ -40,4 +40,4 @@ const times3 = v => v * 3;
 
 const times6 = fnMap(times2, times3);
 
-console.log(times6)(5);
+console.log(times6(8));
