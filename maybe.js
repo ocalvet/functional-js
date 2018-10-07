@@ -12,5 +12,4 @@ const Maybe = require('folktale/maybe');
     const f2 = find([null, 1], x => false); // ==> Maybe.Nothing()
 
     console.log('f1', f1.toString());
-    
     console.log('f2', f2);
