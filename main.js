@@ -1,7 +1,4 @@
 const _ = require('ramda');
-
-const testData = [1, 2, 3, 10, 5, 6, 22, 10, 12];
-
 const log = s => console.log(s);
 const to10String = b => b ? 'Not a ten' : 'Ten';
 const isNotA10 = number => number !== 10;
